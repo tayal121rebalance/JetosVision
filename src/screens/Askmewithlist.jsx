@@ -1,15 +1,17 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Askmecomp from '../components/Askmecomp'
+import Asklist from '../components/Asklist'
 
-const Askmeanything = () => {
+const Askmewithlist = () => {
     return (
       <>
       <Navbar/>
-      <Askmecomp/>
+      {/* <Askmecomp/> */}
+      <Asklist/>
 
       </>
     )
   }
 
-export default Askmeanything
+export default Askmewithlist

@@ -16,9 +16,9 @@ export default function Mainpage() {
         Attach all documents you want to source information from
         </Textbox2>
         <Rectangle>
-            <Submitimage>
-
-            </Submitimage>
+            <Textboxdrop>
+                Choose/Drop PDF files
+            </Textboxdrop>
 
         </Rectangle>
         <Createbutton>
@@ -34,6 +34,32 @@ export default function Mainpage() {
   );
 }
 
+const Textboxdrop = styled.div`
+width: 220px;
+height: 24px;
+
+font-family: 'Inter';
+font-style: normal;
+position: absolute;
+
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+top: 200px;
+left: 460px;
+
+/* Grey/10 */
+
+color: #F2F2F2;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+
+`;
 const Blackwrapper = styled.div`
 display: flex;
 flex-direction: row;
