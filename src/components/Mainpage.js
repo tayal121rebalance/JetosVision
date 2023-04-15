@@ -1,12 +1,41 @@
-import React from "react";
+import React, { useState } from 'react';
 import styled from "styled-components";
+import './fileupload.css';
 
 export default function Mainpage() {
+  const [file, setFile] = useState(null);
+
+  const onFileChange = (e) => {
+    setFile(e.target.files[0]);
+  };
+
+  const onFileUpload = async () => {
+    if (!file) return;
+
+    const formData = new FormData();
+    formData.append('file', file);
+
+    try {
+      const response = await fetch('http://3.15.229.37:8081/upload', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        alert('File uploaded successfully');
+      } else {
+        alert('Failed to upload file');
+      }
+    } catch (error) {
+      console.error('Error uploading file:', error);
+    }
+  };
   return (
     <>
+
     <Blackwrapper>
         <Whitetext>
-            Your Personal
+            Your Personal 
         </Whitetext>
 
         <Bluetext>
@@ -19,7 +48,13 @@ export default function Mainpage() {
             <Textboxdrop>
                 Choose/Drop PDF files
             </Textboxdrop>
-
+            <div className="App">
+            <label htmlFor="file-upload" className="custom-file-upload" >
+               Custom Choose File Text my man
+            </label>
+            <input id="file-upload" type="file" onChange={onFileChange} style={{ display: 'none' }} />
+              <button onClick={onFileUpload}>Custom Upload Text</button>
+            </div>
         </Rectangle>
         <Createbutton>
             <Textbox3>

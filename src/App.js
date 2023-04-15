@@ -9,9 +9,9 @@ import Askmewithlist from './screens/Askmewithlist';
 function App() {
   return (
     <>
-    <Landingpage/>
-    {/* <Askmeanything/> */}
-    {/* <Askmewithlist/> */}
+    // <Landingpage/>
+    // <Askmeanything/>
+    <Askmewithlist/> 
 
     </>
   );
