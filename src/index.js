@@ -15,3 +15,12 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+const fileName = document.querySelector(".fileName");
+
+const fileInput = document.querySelector("input[type=file]");
+fileInput.addEventListener("change", function() {
+    if (this.files && this.files[0]) {
+        fileName.innerHTML = this.files[0].name;
+    }
+});

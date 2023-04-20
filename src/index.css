@@ -11,3 +11,39 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.up{
+  margin: 0 auto;
+  text-align: center ;
+  margin-top: 10px;
+}
+
+.fileName{
+  margin-top: 20px;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  padding:15px;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: #737275;
+  border: none;
+  width: 220px;
+}
+
+.file-search-button{
+  margin-top: 30px;
+}
+
+.custom-file-upload {
+  color: rgb(238, 230, 230);
+  display: inline-block;
+  padding:8px;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: #111424;
+  border: none;
+}
+
+input[type="file"] {
+  display: none;
+}

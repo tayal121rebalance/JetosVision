@@ -12,18 +12,20 @@ export default function Askmecomp() {
         <Bluetext>
             Anything
         </Bluetext>
+
         <Formmain>
-            
+
         </Formmain>
             <Askbutton>
                 Ask
             </Askbutton>
 
         <Createbutton>
+
             <Textbox3>
                 Create assistant
             </Textbox3>
-
+        
         </Createbutton>
     </Blackwrapper>
     

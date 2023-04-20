@@ -1,5 +1,27 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
+// import script
+
+// class submitcompmonent extends Component{
+
+//     constructor(props){
+//         super(props);
+//         this.state =  {
+//             file: ''
+//         }
+//     }
+    
+
+    // onchange(e){
+    //   let files =  e.target.files;
+    //   let reader = new FileReader();
+    //   reader.readAsDataURL(files[0]);
+
+    //   reader.onload = (e) =>{
+    //     console.warn("file data", e.target.result)
+    //   }
+    // }
+// }
 
 export default function Mainpage() {
   return (
@@ -17,13 +39,28 @@ export default function Mainpage() {
         </Textbox2>
         <Rectangle>
             <Textboxdrop>
-                Choose/Drop PDF files
+                {/* <Dropfile><input type="file" name="file" onChange={(e)=>this.onchange(e)} /></Dropfile> */}
+                {/* Choose/Drop PDF files */}
+                <div class="up">
+
+                    <div class="fileName">
+                    <a>NO FILE SELECTED</a>
+                    </div>
+
+                    <div class="file-search-button">
+                    <label for="file-upload" class="custom-file-upload">
+                        <i class="fa fa-search"></i> Choose/Drop files
+                    </label>
+                    <input id="file-upload" type="file"/>
+                    </div>
+                </div>
+                <script src="script.js"></script>
             </Textboxdrop>
 
         </Rectangle>
         <Createbutton>
             <Textbox3>
-                Create assistant
+                Submit
             </Textbox3>
 
         </Createbutton>
@@ -47,6 +84,53 @@ font-size: 20px;
 line-height: 24px;
 top: 200px;
 left: 460px;
+
+/* Grey/10 */
+
+color: #F2F2F2;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+
+`;
+
+const Dropfile = styled.div`
+
+
+font-family: 'Inter';
+font-style: normal;
+position: absolute;
+
+font-weight: 40;
+font-size: 20px;
+line-height: 24px;
+
+/* Grey/10 */
+
+color: #F2F2F2;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+
+`;
+const filename = styled.div`
+
+
+font-family: 'Inter';
+font-style: normal;
+position: absolute;
+
+font-weight: 40;
+font-size: 20px;
+line-height: 24px;
 
 /* Grey/10 */
 
@@ -187,7 +271,7 @@ border-radius: 64px;
 
 `;
 const Textbox3 = styled.div`
-width: 191px;
+width: 101px;
 height: 29px;
 
 font-family: 'Inter';
@@ -196,6 +280,7 @@ font-weight: 600;
 font-size: 24px;
 line-height: 29px;
 /* identical to box height */
+text-align : center;
 
 
 /* Grey/60 */
