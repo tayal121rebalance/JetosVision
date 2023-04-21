@@ -16,11 +16,20 @@ root.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-const fileName = document.querySelector(".fileName");
+function initializeFileInput() {
+  const fileName = document.querySelector(".fileName");
 
-const fileInput = document.querySelector("input[type=file]");
-fileInput.addEventListener("change", function() {
-    if (this.files && this.files[0]) {
+  const fileInput = document.querySelector("input[type=file]");
+  if (fileInput) {
+    fileInput.addEventListener("change", function () {
+      if (this.files && this.files[0]) {
         fileName.innerHTML = this.files[0].name;
-    }
-});
+      }
+    });
+  } else {
+    console.error('fileInput not found');
+  }
+}
+
+// Execute initializeFileInput once the DOM content has been loaded
+document.addEventListener("DOMContentLoaded", initializeFileInput);
