@@ -23,12 +23,15 @@ import styled from "styled-components";
     // }
 // }
 
+
 export default function Mainpage() {
+  const myObj = {firstname:"John", lastname:"Doe"};
+  console.log(myObj);
   return (
     <>
     <Blackwrapper>
         <Whitetext>
-            Your Personal
+            Your personal
         </Whitetext>
 
         <Bluetext>

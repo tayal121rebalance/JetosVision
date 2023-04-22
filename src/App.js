@@ -7,6 +7,7 @@ import Askmewithlist from './screens/Askmewithlist';
 
 
 function App() {
+  console.log('asdwewqasdasd anything in the console');    
   return (
     <>
     <Landingpage/>
