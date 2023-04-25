@@ -1,19 +1,19 @@
-// import logo from './logo.svg';
-import React from 'react';
-import './App.css';
-import Landingpage from './screens/Landingpage';
-import Askmeanything from './screens/Askmeanything';
-import Askmewithlist from './screens/Askmewithlist';
+import React from "react";
+import styled from "styled-components";
+import Navbar from "./components/Navbar";
+import FileUpload from "./components/FileUpload";
 
+
+const MainContainer = styled.div`
+  background: rgba(0, 0, 0, 0.1);
+`;
 
 function App() {
   return (
-    <>
-    // <Landingpage/>
-    // <Askmeanything/>
-    <Askmewithlist/> 
-
-    </>
+    <MainContainer>
+      <Navbar />
+      <FileUpload />
+    </MainContainer>
   );
 }
 
