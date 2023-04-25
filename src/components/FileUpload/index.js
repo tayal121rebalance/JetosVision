@@ -16,12 +16,13 @@ import {
 import "./index.css";
 import UploadLogo from "../../assests/icons/upload.png";
 import FileList from "../FileList";
-import AskMe from "../AskMe";
+
+import { useNavigate } from "react-router-dom";
 
 const FileUpload = () => {
   const [files, setFiles] = useState([]);
   const fileInputRef = useRef(null);
-  const [isAskQuestion, setIsAskQuestion] = useState(false);
+  const navigate = useNavigate();
 
   const onFileChange = (e) => {
     const newFiles = Array.from(e.target.files);
@@ -67,9 +68,9 @@ const FileUpload = () => {
     }
   };
 
-  useEffect(() => {
-    console.log(files);
-  }, [files]);
+  // useEffect(() => {
+  //   console.log(files);
+  // }, [files]);
 
   const uploadFiles = async (files) => {
     const formData = new FormData();
@@ -86,7 +87,7 @@ const FileUpload = () => {
 
       if (response.ok) {
         console.log(response);
-        setIsAskQuestion(true);
+        navigate('/askme');
       } else {
         throw Error("error uploading files");
       }
@@ -95,53 +96,48 @@ const FileUpload = () => {
     }
   };
 
-
-  let btnBackground = files.length !== 0 ? "#FFFFFF" : "#1b1b1b" 
-  let btnTextColor = files.length !== 0 ? "#000000" : "#828282" 
+  let btnBackground = files.length !== 0 ? "#FFFFFF" : "#1b1b1b";
+  let btnTextColor = files.length !== 0 ? "#000000" : "#828282";
   return (
     <>
-      {!isAskQuestion ? (
-        <Blackwrapper>
-          <Whitetext>Your Personal</Whitetext>
-          <Bluetext>Research assistant</Bluetext>
-          <Textbox2>
-            Attach all documents you want to source information from
-          </Textbox2>
-          {files.length !== 0 && (
-            <FileListContainer>
-              <FileList files={files} onRemoveFile={onRemoveFile} />
-            </FileListContainer>
-          )}
-          <FileInputContainer>
-            <FileInputDropBox
-              ref={fileInputRef}
-              className="fileInput"
-              onDragEnter={onDragIn}
-              onDragLeave={onDragOut}
-              onDrop={onDrop}
-            >
-              <FileInput
-                className="fileInput"
-                type="file"
-                multiple
-                onChange={onFileChange}
-              ></FileInput>
-              <FileInputPlaceholder>
-                <ImageIcon src={UploadLogo} alt="upload_image" />
-                <Textboxdrop>Choose/Drop PDF files</Textboxdrop>
-              </FileInputPlaceholder>
-            </FileInputDropBox>
-          </FileInputContainer>
-          <CreateButton
-            onClick={() => uploadFiles(files)}
-            style={{ background: btnBackground, color: btnTextColor }}
+      <Blackwrapper>
+        <Whitetext>Your Personal</Whitetext>
+        <Bluetext>Research assistant</Bluetext>
+        <Textbox2>
+          Attach all documents you want to source information from
+        </Textbox2>
+        {files.length !== 0 && (
+          <FileListContainer>
+            <FileList files={files} onRemoveFile={onRemoveFile} />
+          </FileListContainer>
+        )}
+        <FileInputContainer>
+          <FileInputDropBox
+            ref={fileInputRef}
+            className="fileInput"
+            onDragEnter={onDragIn}
+            onDragLeave={onDragOut}
+            onDrop={onDrop}
           >
-            Create assistant
-          </CreateButton>
-        </Blackwrapper>
-      ) : (
-        <AskMe />
-      )}
+            <FileInput
+              className="fileInput"
+              type="file"
+              multiple
+              onChange={onFileChange}
+            ></FileInput>
+            <FileInputPlaceholder>
+              <ImageIcon src={UploadLogo} alt="upload_image" />
+              <Textboxdrop>Choose/Drop PDF files</Textboxdrop>
+            </FileInputPlaceholder>
+          </FileInputDropBox>
+        </FileInputContainer>
+        <CreateButton
+          onClick={() => uploadFiles(files)}
+          style={{ background: btnBackground, color: btnTextColor }}
+        >
+          Create assistant
+        </CreateButton>
+      </Blackwrapper>
     </>
   );
 };
