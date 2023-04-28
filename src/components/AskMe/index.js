@@ -17,15 +17,13 @@ export default function AskMe() {
 
   const askRequest = async () => {
     try {
-      const response = await fetch("http://localhost:8001/api/contacts", {
+      const response = await fetch("http://52.15.91.215:8080/query", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          name: text,
-          email: "a@gmail.com",
-          phone: "908765432",
+          query: text,
         }),
       });
 

@@ -80,7 +80,7 @@ const FileUpload = () => {
     }
 
     try {
-      const response = await fetch("https://v2.convertapi.com/upload", {
+      const response = await fetch("http://18.189.194.58:8081/upload", {
         method: "POST",
         body: formData,
       });

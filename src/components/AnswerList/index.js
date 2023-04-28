@@ -25,8 +25,8 @@ const AnswerList = (props) => {
         {data.map((param, index) => {
           return (
             <SecondaryContainer key={index}>
-              <Question>{param.name}</Question>
-              <Answer>{param.email}</Answer>
+              <Question>{param.question}</Question>
+              <Answer>{param.answer}</Answer>
             </SecondaryContainer>
           );
         })}
