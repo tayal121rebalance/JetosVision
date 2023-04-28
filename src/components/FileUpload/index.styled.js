@@ -8,6 +8,8 @@ export const FileInput = styled.input`
   width: 100%;
   height: 100%;
   cursor: pointer;
+
+  ${'' /* Changed */}
 `;
 
 export const Textboxdrop = styled.div`
@@ -18,6 +20,15 @@ export const Textboxdrop = styled.div`
   font-size: 20px;
   line-height: 24px;
   color: #f2f2f2;
+
+  ${'' /* Changed */}
+  margin: 1rem auto;
+  ${'' /* border: 2px solid white; */}
+
+  @media(min-width: 680px) {
+    font-size: 1.5rem;
+  }
+
 `;
 
 export const Blackwrapper = styled.div`
@@ -25,23 +36,48 @@ export const Blackwrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  ${'' /* Changed */}
+  ${'' /* border: 2px solid green; */}
+  width: 90%;
+  margin: 0rem auto;
+  height: 100%;
+
+  @media(min-width: 680px) {
+    margin: 0.5rem auto;
+  }
   
 `;
 export const Whitetext = styled.div`
   
   width: 651px;
-  height: 116px;
+  ${'' /* height: 116px; */}
   left: 384px;
   top: 188px;
+  width: 80%;
 
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  font-size: 96px;
+  ${'' /* font-size: 96px; */}
   line-height: 116px;
 
   color: rgba(255, 255, 255, 0.95);
   text-align: center;
+
+  ${'' /* Changed */}
+  font-size: 1.5rem;
+  width: 90%;
+  margin: 0rem auto;
+  padding: 0;
+  height: 4rem;
+  line-height: 3.5rem;
+  ${'' /* border: 2px solid red; */}
+
+  @media(min-width: 680px) {
+    font-size: 2.5rem;
+    margin: 0.5rem auto;
+  }
+
 `;
 export const Bluetext = styled.div`
  
@@ -53,28 +89,64 @@ export const Bluetext = styled.div`
   font-family: "Inter";
   font-style: normal;
   font-weight: 1000;
-  font-size: 96px;
+  ${'' /* font-size: 96px; */}
   line-height: 76px;
   text-align: center;
+
+  ${'' /* Changed */}
+  width: 90%;
+  margin: 0rem auto;
+  height: 3rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  ${'' /* border: 2px solid gray; */}
+
 
   background: linear-gradient(180deg, #7577ff 0%, #4c4dbb 100%);
   -webkit-background-clip: text;
   color: transparent;
+
+  @media(min-width: 680px) {
+    height: 4rem;
+    font-size: 3rem;
+    line-height: 1;
+    margin: 0.5rem auto;
+  }
+
 `;
 export const Textbox2 = styled.div`
-  width: 548px;
+  ${'' /* width: 548px; */}
   height: 24px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  ${'' /* font-size: 20px; */}
   line-height: 24px;
   color: #bdbdbd;
-  margin-top: 22px
+  margin-top: 22px;
+
+  ${'' /* Changed */}
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  height: 4rem;
+  width: 90%;
+  ${'' /* border: 2px solid green; */}
+
+  @media(min-width: 680px) {
+    font-size: 1.5rem;
+  }
+
 `;
 
 export const CreateButton = styled.button`
-  margin-top: 50px;
+  ${'' /* margin-top: 50px; */}
+
+  ${'' /* Changed */}
+  width: 80%;
+  margin-top: 1.25rem;
+  ${'' /* border: 2px solid green; */}
+
   /* Buttons */
 
   box-sizing: border-box;
@@ -93,14 +165,26 @@ export const CreateButton = styled.button`
   box-shadow: 5px 5px 50px rgba(70, 27, 194, 0.2);
   border-radius: 64px;
 
-  width: 255px;
+  ${'' /* width: 255px; */}
   height: 61px;
+
+  ${'' /* Changed */}
+  font-size: 1.25rem;
+  width: 15rem;
+  margin: 2rem auto;
+  ${'' /* border: 2px solid blue; */}
 
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
-  font-size: 18px;
+  ${'' /* font-size: 18px; */}
   line-height: 19px;
+
+  @media(min-width: 680px) {
+    width: 20rem;
+    margin: 4rem auto;
+    font-size: 1.5rem;
+  }
  
   transition: 0.2s ease-in-out 0s;
   &:hover {
@@ -109,12 +193,18 @@ export const CreateButton = styled.button`
 `;
 
 export const FileInputContainer = styled.div`
-  margin-top: 36px;
+  ${'' /* margin-top: 36px; */}
   display: flex;
   justify-content: center;
   align-items: center;
   height: auto;
-  width: 1118px;
+  ${'' /* width: 1118px; */}
+
+  ${'' /* Changed */}
+  ${'' /* border: 2px solid green; */}
+  width: 80%;
+  margin: 2rem auto;
+
   min-height: 360px;
   border: 4px solid #03045e;
   flex-direction: column;
@@ -130,8 +220,16 @@ export const FileInputContainer = styled.div`
 `;
 
 export const ImageIcon = styled.img`
- width: 72px,
- height: 84px
+ width: 72px;
+ height: 84px;
+ margin: 1rem auto;
+
+ ${'' /* border: 2px solid green; */}
+
+ @media(min-width: 680px) {
+  width: 100px;
+  height: 105px;
+ }
 `;
 export const FileInputDropBox = styled.div`
   width: 1118px;
@@ -142,6 +240,14 @@ export const FileInputDropBox = styled.div`
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  width: 80%;
+
+  ${'' /* Changed */}
+  ${'' /* border: 2px solid blue; */}
+  width: 100%;
+  height: 100%;
+  border-radius: 63px;
+  ${'' /* border: 2px solid green; */}
 `;
 
 export const FileInputPlaceholder = styled.div`
@@ -151,8 +257,13 @@ export const FileInputPlaceholder = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 500px;
+  ${'' /* width: 500px; */}
   flex-direction: column;
+
+  ${'' /* Changed */}
+  width: 90%;
+  margin: 0rem auto;
+  ${'' /* border: 4px solid brown; */}
 `;
 
 export const FileListContainer = styled.div`
