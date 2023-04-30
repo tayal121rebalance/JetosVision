@@ -1,5 +1,17 @@
 import styled from "styled-components";
 
+export const LoadingContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #7577ff;
+`;
+
+
 export const Askbutton = styled.button`
   box-sizing: border-box;
   display: flex;

@@ -22,7 +22,7 @@ const AnswerList = (props) => {
   return (
     <>
       <MainContainer>
-        {data.map((param, index) => {
+        {data.slice().reverse().map((param, index) => {
           return (
             <SecondaryContainer key={index}>
               <Question>{param.question}</Question>

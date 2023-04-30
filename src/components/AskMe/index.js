@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+
+import React, { useState, useEffect } from "react";
 import {
   Askbutton,
   Formmain,
@@ -8,16 +9,24 @@ import {
   TextContainer,
   InputContainer,
   AnswerContainer,
+  LoadingContainer,
 } from "./index.styled";
+
 import AnswerList from "../AnswerList";
 
 export default function AskMe() {
   const [text, setText] = useState("");
   const [data, setData] = useState([]);
-
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    console.log("loading state changed to:", loading);
+  }, [loading]);
   const askRequest = async () => {
+    setLoading(true);
     try {
-      const response = await fetch("http://52.15.91.215:8080/query", {
+      console.log("making a loading request. Now here's the var")
+      console.log(loading);
+      const response = await fetch("http://52.15.91.215:8082/query", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -26,18 +35,21 @@ export default function AskMe() {
           query: text,
         }),
       });
+     console.log("this is just after loading. and her's the var"); 
+     console.log(loading);
 
       if (response.ok) {
         const newData = await response.json();
         setData([...data, newData]);
         console.log(data);
-        
       } else {
         throw new Error("Error submitting input");
       }
-      setText("")
+      setText("");
     } catch (error) {
       console.error(error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -61,7 +73,9 @@ export default function AskMe() {
           </InputContainer>
         </Blackwrapper>
       </div>
-      {data.length!==0 ? (
+      {loading ? (
+        <LoadingContainer>Process request, please wait for 120 seconds for the server to respond to your request...</LoadingContainer> // You can replace this with a spinner or any other loading indicator
+      ) : data.length !== 0 ? (
         <AnswerContainer>
           <AnswerList data={data} />
         </AnswerContainer>
