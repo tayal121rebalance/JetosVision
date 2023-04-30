@@ -3,11 +3,32 @@ import styled from "styled-components";
 export const MainConatiner = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-direction: row;
   padding: 24px;
+
+  ${'' /* Changed */}
+  padding: 1rem 0rem;
+  width: 90%;
+  margin: 0rem auto;
+  ${'' /* border: 2px solid green; */}
+
+  @media(min-width: 680px) {
+    margin: 0.5rem auto;
+  }
+
 `;
 
-export const ImageContainer = styled.div``;
+export const ImageContainer = styled.div`
+  height: 3.2rem;
+  width: 3.2rem;
+  ${'' /* border: 2px solid red; */}
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+`;
 
 export const ButtonContainer = styled.div`
   box-sizing: border-box;
@@ -27,6 +48,12 @@ export const ButtonContainer = styled.div`
   flex: none;
   order: 1;
   flex-grow: 0;
+
+  ${'' /* Changed */}
+  border: 2px solid black;
+  width: 10rem;
+  height: 3.5rem;
+  padding: 0.9rem;
 `;
 
 export const Textbox1 = styled.div`
@@ -43,5 +70,14 @@ flex: none;
 order: 0;
 flex-grow: 0;
 
+${'' /*  Changed */}
+width: 100%;
+height: 100%;
+font-size: 1.15rem;
+line-height: 1.5rem;
+${'' /* border: 2px solid black; */}
+
+@media(min-width: 680px) {
+  font-size: 1.35rem;
 }
 `;

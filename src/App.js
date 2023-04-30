@@ -7,6 +7,10 @@ import AskMe from "./components/AskMe";
 
 const MainContainer = styled.div`
   background: rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 `;
 
 function App() {

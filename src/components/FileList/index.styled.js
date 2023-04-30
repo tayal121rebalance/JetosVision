@@ -3,11 +3,18 @@ export const FileContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 12px;
+
+  ${'' /* Changed */}
+  ${'' /* border: 2px solid green; */}
+  width: 100%;
+  margin: 1rem auto;
+  flex-direction: row;
+  flex-wrap: wrap;
 `;
 
 export const MainContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 16px;
@@ -17,6 +24,12 @@ export const MainContainer = styled.div`
   background: rgba(235, 235, 235, 0.05);
   backdrop-filter: blur(250px);
   border-radius: 32px;
+
+  ${'' /* Changed */}
+  margin: 0.25rem auto;
+  padding: 0;
+  flex-wrap: wrap;
+  ${'' /* border: 2px solid green; */}
 `;
 
 export const ImageText = styled.div`
