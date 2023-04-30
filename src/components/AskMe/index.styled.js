@@ -4,10 +4,11 @@ export const LoadingContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 50px;
-  margin-top: 1rem;
+  width: 90%;
+  height: 5rem;
+  margin: 1rem auto;
   font-size: 1.2rem;
+  line-height: 1.5;
   color: #7577ff;
 `;
 
@@ -103,23 +104,19 @@ export const Blackwrapper = styled.div`
   }
 `;
 export const Whitetext = styled.div`
-  margin: 8px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  font-size: 96px;
-  line-height: 116px;
   color: rgba(255, 255, 255, 0.95);
   text-align: center;
 
   ${'' /* Changed */}
   font-size: 3rem;
-  line-height: -1;
+  line-height: 1;
   margin: 0.25rem auto;
-  ${'' /* border: 2px solid green; */}
 
   @media(min-width: 680px) {
-    font-size: 4.5rem;
+    font-size: 4rem;
     margin: 0.5rem 1rem;
     line-height: 0;
   }
@@ -143,7 +140,7 @@ export const Bluetext = styled.div`
   ${'' /* border: 2px solid green; */}
 
   @media(min-width: 680px) {
-    font-size: 4.5rem;
+    font-size: 4rem;
     margin: 0.5rem 1rem;
     line-height: -1;
   }
@@ -157,7 +154,7 @@ export const TextContainer = styled.div`
 
   @media(min-width: 680px) {
     flex-direction: row;
-    width: 70%;
+    justtify-content: flex-start;
     align-items: center;
   }
 `;
@@ -180,12 +177,11 @@ export const InputContainer = styled.div`
 `;
 
 export const AnswerContainer = styled.div`
-margin-top: 24px; 
 display: flex;
 flex-direction: row;
-width: 100%;
+width: 90%;
+margin: 1rem auto; 
 align-items: center;
 justify-content: center;
 gap: 12px;
-border: 2px solid green;
 `;
