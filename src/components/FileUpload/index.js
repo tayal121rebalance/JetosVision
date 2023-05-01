@@ -15,12 +15,12 @@ import {
   HowItWorks,
   HowItWorksText,
   WorksContainer,
-  
+
   WorksContainerOne,
   WorksContainerOneText,
   WorkIconOne,
   WorkNumOne,
-  
+
   WorksContainerTwo,
   WorksContainerTwoText,
   WorkIconTwo,
@@ -30,11 +30,27 @@ import {
   WorksContainerThreeText,
   WorkIconThree,
   WorkNumThree,
-  
+
   WorksContainerFour,
   WorksContainerFourText,
   WorkIconFour,
-  WorkNumFour
+  WorkNumFour,
+
+  AboutSection,
+  FirstSection,
+  FirstIcon,
+  FirstHead,
+  FirstPara,
+
+  SecondSection,
+  SecondIcon,
+  SecondHead,
+  SecondPara,
+
+  ThirdSection,
+  ThirdIcon,
+  ThirdHead,
+  ThirdPara
 
 
 } from "./index.styled";
@@ -176,14 +192,14 @@ const FileUpload = () => {
               <WorkNumOne><span>01</span></WorkNumOne>
 
             </WorksContainerOne>
-            
+
             <WorksContainerTwo>
               <WorksContainerTwoText>Upload all the project documents</WorksContainerTwoText>
               <WorkIconTwo></WorkIconTwo>
               <WorkNumTwo><span>02</span></WorkNumTwo>
 
             </WorksContainerTwo>
-            
+
             <WorksContainerThree>
               <WorksContainerThreeText>Vision Processes your documents</WorksContainerThreeText>
               <WorkIconThree>
@@ -192,7 +208,7 @@ const FileUpload = () => {
               <WorkNumThree><span>03</span></WorkNumThree>
 
             </WorksContainerThree>
-            
+
             <WorksContainerFour>
               <WorksContainerFourText>Ask any question</WorksContainerFourText>
               <WorkIconFour></WorkIconFour>
@@ -203,6 +219,37 @@ const FileUpload = () => {
           </WorksContainer>
         </HowItWorks>
 
+        <AboutSection>
+          <FirstSection>
+            <FirstIcon></FirstIcon>
+            
+            <FirstHead>Save hours wasted</FirstHead>
+            
+            <FirstPara>Go through thousands of lines of fine print in a matter of minutes. Once Vision processes your documents, get your questions answered in seconds.</FirstPara>
+            
+          </FirstSection>
+          
+          <SecondSection>
+            <SecondIcon></SecondIcon>
+            
+            <SecondHead>Control your data</SecondHead>
+            
+            <SecondPara>Vision uses secure data rooms that don’t save your information. View all logs of access and delete them when you’re done</SecondPara>
+
+          </SecondSection>
+          
+          <ThirdSection>
+            <ThirdIcon></ThirdIcon>
+            
+            <ThirdHead>Accuracy you need</ThirdHead>
+            
+            <ThirdPara>Find the clause you’re looking for or a paraphrased version of it. Reference the exact locations in the source document.</ThirdPara>
+
+          </ThirdSection>
+
+        </AboutSection>
+
+        
 
       </Blackwrapper>
     </>

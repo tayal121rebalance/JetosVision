@@ -281,7 +281,6 @@ export const FileListContainer = styled.div`
 
 
 export const HowItWorks = styled.div`
-  border: 2px solid green;
   width: 90%;
   height: auto;
   margin: 1rem auto;
@@ -324,16 +323,10 @@ export const WorksContainer = styled.div`
   align-items: flex-start;
   padding: 0px;
   gap: 21px;
-  width: 100%;
-  ${'' /* height: 10rem; */}
-  border: 2px dotted blue;
+  width: 90%;
+  margin: 1rem auto;
+  height: auto;
 
-/* Inside auto layout */
-
-  flex: none;
-  order: 1;
-  align-self: stretch;
-  flex-grow: 0;
 `;
 
 
@@ -346,17 +339,16 @@ export const WorksContainerOne = styled.div`
   padding: 2rem 1rem;
   margin: 2rem auto;
   gap: 10px;
-  isolation: isolate;
   width: 100%;
   height: 18rem;
 
-  background: linear-gradient(180deg, #121212 0%, rgba(48, 48, 48, 0) 100%);
+  background: linear-gradient(180deg, #121212 0%, rgba(48, 48, 48, 0.5) 100%);
   backdrop-filter: blur(250px);
   border-radius: 32px;
-  
-  flex: none;
-  order: 0;
-  flex-grow: 1;
+
+  @media(min-width: 620px) {
+    width: 50%;
+  }
 `;
 
 export const WorksContainerOneText = styled.div`
@@ -468,17 +460,17 @@ export const WorksContainerTwo = styled.div`
   padding: 2rem 1rem;
   margin: 1rem auto;
   gap: 10px;
-  isolation: isolate;
   width: 100%;
   height: 18rem;
 
-  background: linear-gradient(180deg, #121212 0%, rgba(48, 48, 48, 0) 100%);
+  background: linear-gradient(180deg, #121212 0%, rgba(48, 48, 48, 0.5) 100%);
   backdrop-filter: blur(250px);
   border-radius: 32px;
+
+  @media(min-width: 620px) {
+    width: 50%;
+  }
   
-  flex: none;
-  order: 0;
-  flex-grow: 1;
 `;
 
 export const WorksContainerTwoText = styled.div`
@@ -600,17 +592,17 @@ export const WorksContainerThree = styled.div`
   padding: 2rem 1rem;
   margin: 1rem auto;
   gap: 10px;
-  isolation: isolate;
   width: 100%;
   height: 18rem;
 
-  background: linear-gradient(180deg, #121212 0%, rgba(48, 48, 48, 0) 100%);
+  background: linear-gradient(180deg, #121212 0%, rgba(48, 48, 48, 0.5) 100%);
   backdrop-filter: blur(250px);
   border-radius: 32px;
+
+  @media(min-width: 620px) {
+    width: 50%;
+  }
   
-  flex: none;
-  order: 0;
-  flex-grow: 1;
 `;
 
 export const WorksContainerThreeText = styled.div`
@@ -717,17 +709,17 @@ export const WorksContainerFour = styled.div`
   padding: 2rem 1rem;
   margin: 1rem auto;
   gap: 10px;
-  isolation: isolate;
   width: 100%;
   height: 18rem;
 
   background: linear-gradient(180deg, #121212 0%, rgba(48, 48, 48, 0) 100%);
   backdrop-filter: blur(250px);
   border-radius: 32px;
+
+  @media(min-width: 620px) {
+    width: 50%;
+  }
   
-  flex: none;
-  order: 0;
-  flex-grow: 1;
 `;
 
 export const WorksContainerFourText = styled.div`
@@ -895,4 +887,217 @@ z-index: 2;
   flex-grow: 0;
 }
 
+`;
+
+
+export const AboutSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 90%;
+  margin: 1rem auto;
+  height: auto;
+  left: 1px;
+  top: 1453px;
+`;
+
+export const FirstSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  width: 100%;
+  height: auto;
+  margin: 1rem auto;
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+
+  color: white;
+`;
+
+export const FirstIcon = styled.div`
+  width: 10rem;
+  height: 10rem;
+
+  background: linear-gradient(180deg, rgba(94, 96, 218, 0.5) 0%, rgba(117, 119, 255, 0) 100%);
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+`;
+
+export const FirstHead = styled.div` 
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 1;
+  leading-trim: both;
+  text-edge: cap;
+  margin: 1rem 0rem;
+  text-align: justify;
+
+  color: rgba(255, 255, 255, 0.95);
+`;
+
+export const FirstPara =styled.div`
+  
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 1.4rem;
+line-height: 1.25;
+margin: 1rem 0rem;
+
+/* Grey/ 40 */
+
+color: #BDBDBD;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+`;
+export const SecondSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  width: 100%;
+  height: auto;
+  margin: 1rem auto;
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+
+  color: white;
+`;
+
+export const SecondIcon = styled.div`
+  width: 10rem;
+  height: 10rem;
+
+  background: linear-gradient(180deg, rgba(94, 96, 218, 0.5) 0%, rgba(117, 119, 255, 0) 100%);
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+`;
+
+export const SecondHead = styled.div` 
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 1;
+  leading-trim: both;
+  text-edge: cap;
+  margin: 1rem 0rem;
+  text-align: justify;
+
+  color: rgba(255, 255, 255, 0.95);
+`;
+
+export const SecondPara =styled.div`
+  
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 1.4rem;
+line-height: 1.25;
+margin: 1rem 0rem;
+
+/* Grey/ 40 */
+
+color: #BDBDBD;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+`;
+
+
+export const ThirdSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  width: 100%;
+  height: auto;
+  margin: 1rem auto;
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+
+  color: white;
+`;
+
+export const ThirdIcon = styled.div`
+  width: 10rem;
+  height: 10rem;
+
+  background: linear-gradient(180deg, rgba(94, 96, 218, 0.5) 0%, rgba(117, 119, 255, 0) 100%);
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+`;
+
+export const ThirdHead = styled.div` 
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 1;
+  leading-trim: both;
+  text-edge: cap;
+  margin: 1rem 0rem;
+  text-align: justify;
+
+  color: rgba(255, 255, 255, 0.95);
+`;
+
+export const ThirdPara =styled.div`
+  
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 1.4rem;
+line-height: 1.25;
+margin: 1rem 0rem;
+
+/* Grey/ 40 */
+
+color: #BDBDBD;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
 `;
