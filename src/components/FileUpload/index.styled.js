@@ -298,8 +298,6 @@ export const HowItWorks = styled.div`
 `;
 
 export const HowItWorksText = styled.div`
-  ${'' /* width: 196px; */}
-  ${'' /* height: 50px; */}
 
   font-family: 'Inter';
   font-style: normal;
@@ -314,6 +312,10 @@ export const HowItWorksText = styled.div`
   order: 0;
   flex-grow: 0;
   z-index: 0;
+
+  @media(min-width: 780px) {
+    font-size: 3rem;
+  }
 `;
 
 export const WorksContainer = styled.div`
@@ -327,6 +329,12 @@ export const WorksContainer = styled.div`
   margin: 1rem auto;
   height: auto;
 
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+
+  
 `;
 
 
@@ -339,8 +347,8 @@ export const WorksContainerItem = styled.div`
   padding: 2rem 1rem;
   margin: 2rem auto;
   gap: 10px;
-  width: 90%;
-  height: 18rem;
+  width: 253.75px;
+  height: 280px;
 
   background: linear-gradient(180deg, #121212 0%, rgba(48, 48, 48, 0.5) 100%);
   backdrop-filter: blur(250px);
@@ -348,9 +356,7 @@ export const WorksContainerItem = styled.div`
 `;
 
 export const WorksContainerText = styled.div`
-  ${'' /* width: 196px; */}
-  ${'' /* height: 50px; */}
-
+  
   font-family: 'Inter';
   font-style: normal;
   font-weight: 600;
@@ -581,7 +587,7 @@ export const ListItem = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0.2rem;
+  padding: 0.9rem;
   margin: 1rem auto;
   gap: 10px;
 
@@ -662,5 +668,12 @@ backdrop-filter: blur(250px);
 /* Note: backdrop-filter has minimal browser support */
 
 border-radius: 96px;
+
+`;
+
+export const Arrow = styled.div`
+ 
+font-size: 2.5rem;
+
 
 `;
