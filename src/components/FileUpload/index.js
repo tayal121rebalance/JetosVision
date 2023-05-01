@@ -12,12 +12,36 @@ import {
   FileInputDropBox,
   FileInputPlaceholder,
   FileListContainer,
-  WorkContainer,
-  Textbox3
+  HowItWorks,
+  HowItWorksText,
+  WorksContainer,
+  
+  WorksContainerOne,
+  WorksContainerOneText,
+  WorkIconOne,
+  WorkNumOne,
+  
+  WorksContainerTwo,
+  WorksContainerTwoText,
+  WorkIconTwo,
+  WorkNumTwo,
+
+  WorksContainerThree,
+  WorksContainerThreeText,
+  WorkIconThree,
+  WorkNumThree,
+  
+  WorksContainerFour,
+  WorksContainerFourText,
+  WorkIconFour,
+  WorkNumFour
+
+
 } from "./index.styled";
 import "./index.css";
 import UploadLogo from "../../assests/icons/upload.png";
 import FileList from "../FileList";
+import WorkLogo1 from "./../../assests/work/workone.svg";
 
 import { useNavigate } from "react-router-dom";
 
@@ -139,9 +163,41 @@ const FileUpload = () => {
         >
           Create assistant
         </CreateButton>
-        <WorkContainer>
-          <Textbox3>How it Works</Textbox3>
-        </WorkContainer>
+
+
+        <HowItWorks>
+          <HowItWorksText>How It Works</HowItWorksText>
+
+          <WorksContainer>
+
+            <WorksContainerOne>
+              <WorksContainerOneText>Define Your Project</WorksContainerOneText>
+              <WorkIconOne src={WorkLogo1} ></WorkIconOne>
+
+            </WorksContainerOne>
+            
+            <WorksContainerTwo>
+              <WorksContainerTwoText>Upload all the project documents</WorksContainerTwoText>
+              <WorkIconTwo></WorkIconTwo>
+              <WorkNumTwo> <span>02</span></WorkNumTwo>
+
+            </WorksContainerTwo>
+            
+            <WorksContainerThree>
+              <WorksContainerThreeText>Vision Processes your documents</WorksContainerThreeText>
+              <WorkIconThree src={WorkLogo1} ></WorkIconThree>
+
+            </WorksContainerThree>
+            
+            <WorksContainerFour>
+              <WorksContainerFourText>Ask any question</WorksContainerFourText>
+              <WorkIconFour src={WorkLogo1} ></WorkIconFour>
+
+            </WorksContainerFour>
+
+          </WorksContainer>
+        </HowItWorks>
+
 
       </Blackwrapper>
     </>
