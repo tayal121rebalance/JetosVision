@@ -269,3 +269,13 @@ export const FileInputPlaceholder = styled.div`
 export const FileListContainer = styled.div`
   margin: 8px
 `;
+
+export const WorkContainer = styled.div`
+  width: 90%;
+  margin: 2rem auto;
+  border: 3px solid green;
+`;
+export const Textbox3 = styled.div`
+  border: 2px dotted red;
+`;
+

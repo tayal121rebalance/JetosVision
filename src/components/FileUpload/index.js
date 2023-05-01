@@ -12,6 +12,8 @@ import {
   FileInputDropBox,
   FileInputPlaceholder,
   FileListContainer,
+  WorkContainer,
+  Textbox3
 } from "./index.styled";
 import "./index.css";
 import UploadLogo from "../../assests/icons/upload.png";
@@ -137,6 +139,10 @@ const FileUpload = () => {
         >
           Create assistant
         </CreateButton>
+        <WorkContainer>
+          <Textbox3>How it Works</Textbox3>
+        </WorkContainer>
+
       </Blackwrapper>
     </>
   );
