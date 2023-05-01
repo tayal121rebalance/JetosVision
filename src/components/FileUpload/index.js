@@ -16,41 +16,25 @@ import {
   HowItWorksText,
   WorksContainer,
 
-  WorksContainerOne,
-  WorksContainerOneText,
-  WorkIconOne,
-  WorkNumOne,
-
-  WorksContainerTwo,
-  WorksContainerTwoText,
-  WorkIconTwo,
-  WorkNumTwo,
-
-  WorksContainerThree,
-  WorksContainerThreeText,
-  WorkIconThree,
-  WorkNumThree,
-
-  WorksContainerFour,
-  WorksContainerFourText,
-  WorkIconFour,
-  WorkNumFour,
+  WorksContainerItem,
+  WorksContainerText,
+  WorkIcon,
+  WorkNum,
 
   AboutSection,
-  FirstSection,
-  FirstIcon,
-  FirstHead,
-  FirstPara,
+  ItemSecion,
+  ItemIcon,
+  ItemHead,
+  ItemPara,
 
-  SecondSection,
-  SecondIcon,
-  SecondHead,
-  SecondPara,
-
-  ThirdSection,
-  ThirdIcon,
-  ThirdHead,
-  ThirdPara
+  FaqSection,
+  FaqHead,
+  FaqList,
+  ListItem,
+  Question,
+  ArrowBox,
+  Arrow,
+  Answer
 
 
 } from "./index.styled";
@@ -186,70 +170,106 @@ const FileUpload = () => {
 
           <WorksContainer>
 
-            <WorksContainerOne>
-              <WorksContainerOneText>Define Your Project</WorksContainerOneText>
-              <WorkIconOne></WorkIconOne>
-              <WorkNumOne><span>01</span></WorkNumOne>
+            <WorksContainerItem>
+              <WorksContainerText>Define Your Project</WorksContainerText>
+              <WorkIcon></WorkIcon>
+              <WorkNum><span>01</span></WorkNum>
 
-            </WorksContainerOne>
+            </WorksContainerItem>
 
-            <WorksContainerTwo>
-              <WorksContainerTwoText>Upload all the project documents</WorksContainerTwoText>
-              <WorkIconTwo></WorkIconTwo>
-              <WorkNumTwo><span>02</span></WorkNumTwo>
+            <WorksContainerItem>
+              <WorksContainerText>Upload all the project documents</WorksContainerText>
+              <WorkIcon></WorkIcon>
+              <WorkNum><span>02</span></WorkNum>
 
-            </WorksContainerTwo>
+            </WorksContainerItem>
 
-            <WorksContainerThree>
-              <WorksContainerThreeText>Vision Processes your documents</WorksContainerThreeText>
-              <WorkIconThree>
+            <WorksContainerItem>
+              <WorksContainerText>Vision Processes your documents</WorksContainerText>
+              <WorkIcon>
                 <span className="one"></span>
-              </WorkIconThree>
-              <WorkNumThree><span>03</span></WorkNumThree>
+              </WorkIcon>
+              <WorkNum><span>03</span></WorkNum>
 
-            </WorksContainerThree>
+            </WorksContainerItem>
 
-            <WorksContainerFour>
-              <WorksContainerFourText>Ask any question</WorksContainerFourText>
-              <WorkIconFour></WorkIconFour>
-              <WorkNumFour><span>04</span></WorkNumFour>
+            <WorksContainerItem>
+              <WorksContainerText>Ask any question</WorksContainerText>
+              <WorkIcon></WorkIcon>
+              <WorkNum><span>04</span></WorkNum>
 
-            </WorksContainerFour>
+            </WorksContainerItem>
 
           </WorksContainer>
         </HowItWorks>
 
         <AboutSection>
-          <FirstSection>
-            <FirstIcon></FirstIcon>
-            
-            <FirstHead>Save hours wasted</FirstHead>
-            
-            <FirstPara>Go through thousands of lines of fine print in a matter of minutes. Once Vision processes your documents, get your questions answered in seconds.</FirstPara>
-            
-          </FirstSection>
-          
-          <SecondSection>
-            <SecondIcon></SecondIcon>
-            
-            <SecondHead>Control your data</SecondHead>
-            
-            <SecondPara>Vision uses secure data rooms that don’t save your information. View all logs of access and delete them when you’re done</SecondPara>
+          <ItemSecion>
+            <ItemIcon></ItemIcon>
+            <ItemHead>Save hours wasted</ItemHead>
+            <ItemPara>Go through thousands of lines of fine print in a matter of minutes. Once Vision processes your documents, get your questions answered in seconds.</ItemPara>
 
-          </SecondSection>
-          
-          <ThirdSection>
-            <ThirdIcon></ThirdIcon>
-            
-            <ThirdHead>Accuracy you need</ThirdHead>
-            
-            <ThirdPara>Find the clause you’re looking for or a paraphrased version of it. Reference the exact locations in the source document.</ThirdPara>
+          </ItemSecion>
 
-          </ThirdSection>
+          <ItemSecion>
+            <ItemIcon></ItemIcon>
+            <ItemHead>Control your data</ItemHead>
+            <ItemPara>Vision uses secure data rooms that don’t save your information. View all logs of access and delete them when you’re done</ItemPara>
+
+          </ItemSecion>
+
+          <ItemSecion>
+            <ItemIcon></ItemIcon>
+            <ItemHead>Accuracy you need</ItemHead>
+            <ItemPara>Find the clause you’re looking for or a paraphrased version of it. Reference the exact locations in the source document.</ItemPara>
+
+          </ItemSecion>
 
         </AboutSection>
 
-        
+        <FaqSection>
+          <FaqHead>FAQ</FaqHead>
+
+          <FaqList>
+            <ListItem>
+              <Question>What is this application about?<ArrowBox></ArrowBox></Question>
+              <Answer>This application lets you chat with any PDF document you upload.</Answer>
+            </ListItem>
+
+            <ListItem>
+              <Question>What if I have a question that the AI can't answer?<ArrowBox></ArrowBox></Question>
+              <Answer>If the answer lies in the uploaded PDF, then there’s a high likelihood that the AI will answer it correctly. Note that the AI is constantly learning, so if it cannot answer your question, you can always ask a different question.</Answer>
+            </ListItem>
+
+            <ListItem>
+              <Question>Is there a limit to the size of the PDF document that can be uploaded?<ArrowBox></ArrowBox></Question>
+              <Answer>Yes, the maximum limit of the PDF document that can be uploaded is 20 MB.</Answer>
+            </ListItem>
+
+            <ListItem>
+              <Question>Does vision have any limitations on the number of PDF documents that can be uploaded per day?<ArrowBox></ArrowBox></Question>
+              <Answer>No, there are no limitations on the number of PDF documents that can be uploaded per day.</Answer>
+            </ListItem>
+            
+            <ListItem>
+              <Question>Can I upload password-protected PDF documents to Vision?<ArrowBox></ArrowBox></Question>
+              <Answer>No, you cannot upload password-protected PDF documents to AskYourPdf.</Answer>
+            </ListItem>
+            
+            <ListItem>
+              <Question>How long are the chat sessions saved on Vision?<ArrowBox></ArrowBox></Question>
+              <Answer>The chat session is available as long as the tab is open.</Answer>
+            </ListItem>
+            
+            <ListItem>
+              <Question>Can I use vision on any device?<ArrowBox></ArrowBox></Question>
+              <Answer>Yes, Vision is accessible from any device with an internet connection.</Answer>
+            </ListItem>
+
+          </FaqList>
+
+        </FaqSection>
+
 
       </Blackwrapper>
     </>
