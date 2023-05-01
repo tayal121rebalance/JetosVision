@@ -172,26 +172,31 @@ const FileUpload = () => {
 
             <WorksContainerOne>
               <WorksContainerOneText>Define Your Project</WorksContainerOneText>
-              <WorkIconOne src={WorkLogo1} ></WorkIconOne>
+              <WorkIconOne></WorkIconOne>
+              <WorkNumOne><span>01</span></WorkNumOne>
 
             </WorksContainerOne>
             
             <WorksContainerTwo>
               <WorksContainerTwoText>Upload all the project documents</WorksContainerTwoText>
               <WorkIconTwo></WorkIconTwo>
-              <WorkNumTwo> <span>02</span></WorkNumTwo>
+              <WorkNumTwo><span>02</span></WorkNumTwo>
 
             </WorksContainerTwo>
             
             <WorksContainerThree>
               <WorksContainerThreeText>Vision Processes your documents</WorksContainerThreeText>
-              <WorkIconThree src={WorkLogo1} ></WorkIconThree>
+              <WorkIconThree>
+                <span className="one"></span>
+              </WorkIconThree>
+              <WorkNumThree><span>03</span></WorkNumThree>
 
             </WorksContainerThree>
             
             <WorksContainerFour>
               <WorksContainerFourText>Ask any question</WorksContainerFourText>
-              <WorkIconFour src={WorkLogo1} ></WorkIconFour>
+              <WorkIconFour></WorkIconFour>
+              <WorkNumFour><span>04</span></WorkNumFour>
 
             </WorksContainerFour>
 
