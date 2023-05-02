@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.div`
-  width: 1118px;
+  width: 90%;
   height: auto;
   display: flex;
   justify-content: center;
@@ -14,12 +14,14 @@ export const MainContainer = styled.div`
   );
   backdrop-filter: blur(250px);
   border-radius: 32px;
-  border: 1px solid grey;
-  padding: 18px;
+  border: 1px solid gray;
+  padding: 1rem;
+  margin: 0.2rem;
+  margin-bottom: 5rem;
 `;
 
 export const SecondaryContainer = styled.div`
-  width: 1054px;
+  width: 100%;
   height: auto;
   background: linear-gradient(
     180deg,
@@ -33,32 +35,47 @@ export const SecondaryContainer = styled.div`
   flex-direction: column;
   color: white;
   border: 1px solid grey;
-  padding: 8px;
-  margin: 8px;
+  padding: 0.75rem;
+
+  @media(min-width: 480px) {
+  width: 95%;
+  margin: 0.5rem auto;
+
+  }
 `;
 
 export const Question = styled.div`
-  width: auto;
-  height: 24px;
-  margin: 8px;
+  width: 95%;
+  height: auto;
+  margin: 0.2rem auto;
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 1.25rem;
+  line-height: 1.8;
   color: #e0e0e0;
-  padding: 4px;
+  padding: 0.3rem;
+  
+  @media(min-width: 990px) {
+    margin: 0.5rem auto;
+    font-size: 1.5rem;
+  }
 `;
 
 export const Answer = styled.div`
-  width: 993px;
+  width: 95%;
   height: auto;
-  margin: 8px;
+  margin: 0.75rem auto;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 1.35rem;
+  line-height: 1.75;
   color: #bdbdbd;
-  padding: 4px;
+  padding: 0.3rem;
+
+  @media(min-width: 990px) {
+    margin: 1.25rem auto;
+    font-size: 1.5rem;
+  }
 `;
