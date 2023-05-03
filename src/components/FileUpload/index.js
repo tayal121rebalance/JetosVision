@@ -106,7 +106,7 @@ const FileUpload = () => {
     }
 
     try {
-      const response = await fetch("http://18.189.194.58:8081/upload", {
+      const response = await fetch("/upload", {
         method: "POST",
         body: formData,
       });

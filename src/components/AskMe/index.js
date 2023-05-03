@@ -26,7 +26,7 @@ export default function AskMe() {
     try {
       console.log("making a loading request. Now here's the var")
       console.log(loading);
-      const response = await fetch("http://52.15.91.215:8082/query", {
+      const response = await fetch("/query", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
