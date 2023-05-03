@@ -383,31 +383,36 @@ export const WorkIcon = styled.div`
   height: 5rem;
   width: 5rem;
   margin: 0.2rem auto;
+  position: relative;
 
-  position: absolute;
+  ${'' /* position: absolute;
   left: 8.33%;
   right: 8.33%;
   top: 8.33%;
-  bottom: 8.33%;
+  bottom: 8.33%; */}
 
   ${'' /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%); */}
   opacity: 0.75;
 
-  position: absolute;
+  ${'' /* position: absolute;
   left: 27.58%;
   right: 27.63%;
   top: 57.46%;
-  bottom: 36.29%;
+  bottom: 36.29%; */}
 
-  position: absolute;
+  ${'' /* position: absolute;
   left: 35%;
   right: 45%;
   top: 40%;
-  bottom: 8.33%;
+  bottom: 8.33%; */}
 
   img {
     height: 100%;
     width: 100%;
+    position: absolute;
+    top: 0;
+
+    
   }
 
 `;
