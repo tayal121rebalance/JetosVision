@@ -127,7 +127,7 @@ const FileUpload = () => {
   return (
     <>
       <Blackwrapper>
-        <Whitetext>Your Personal</Whitetext>
+        <Whitetext>Your Arafat Khan Personal</Whitetext>
         <Bluetext>Research assistant</Bluetext>
         <Textbox2>
           Attach all documents you want to source information from

@@ -49,17 +49,11 @@ export const Blackwrapper = styled.div`
 `;
 export const Whitetext = styled.div`
   
-  width: 651px;
   ${'' /* height: 116px; */}
-  left: 384px;
-  top: 188px;
-  width: 80%;
-
+  
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  ${'' /* font-size: 96px; */}
-  line-height: 116px;
 
   color: rgba(255, 255, 255, 0.95);
   text-align: center;
@@ -69,8 +63,7 @@ export const Whitetext = styled.div`
   width: 90%;
   margin: 0rem auto;
   padding: 0;
-  height: 4rem;
-  line-height: 3.5rem;
+  line-height: 1.7;
   ${'' /* border: 2px solid red; */}
 
   @media(min-width: 680px) {
@@ -81,24 +74,16 @@ export const Whitetext = styled.div`
 `;
 export const Bluetext = styled.div`
  
-  width: 886.63px;
-  height: 74.83px;
-  left: 267.07px;
-  top: 345px;
-
   font-family: "Inter";
   font-style: normal;
   font-weight: 1000;
-  ${'' /* font-size: 96px; */}
-  line-height: 76px;
   text-align: center;
 
   ${'' /* Changed */}
   width: 90%;
   margin: 0rem auto;
-  height: 3rem;
   font-size: 2rem;
-  line-height: 2.5rem;
+  line-height: 1.7;
   ${'' /* border: 2px solid gray; */}
 
 
@@ -360,7 +345,7 @@ export const WorksContainerText = styled.div`
   font-family: 'Inter';
   font-style: normal;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.75rem;
   line-height: 2;
   color: #E0E0E0;
   text-align: center;
@@ -369,11 +354,16 @@ export const WorksContainerText = styled.div`
   order: 0;
   flex-grow: 0;
   z-index: 0;
+
+  @media(min-width: 620px) {
+    font-size: 0.9rem;
+  }
 `;
 
 export const WorkIcon = styled.div`
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
+  margin: 0.2rem auto;
 
   position: absolute;
   left: 8.33%;
@@ -436,7 +426,7 @@ z-index: 2;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
-  font-size: 1.7rem;
+  font-size: 1.25rem;
   line-height: 1;
 
   background: linear-gradient(180deg, #7577FF 0%, #4C4DBB 100%);

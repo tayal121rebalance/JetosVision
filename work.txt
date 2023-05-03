@@ -1,0 +1,25 @@
+- Make askme page respond to enter along with pressing ask
+I tried makeing changes but found that the ask me button has a onclick event already attached and I have no idea about adding an enter button so I couldn't do that.
+
+
+- The blue text “****Your Personal Research assistant” Gets cut out in mobile phone****
+I have fixed it actually it was an error because of explicit height and I have made it responsive and you'll not face any issue regarding it.
+
+- Mobile Number 4 at the top
+
+
+- Mobile Gray square splitting at the top
+Made them to settle in the center of work boxes hope it must me accurate and I am attaching some file regarding the issue.
+
+
+- Mobile gray square absent on the phone
+
+
+- Find free vectors and download and use them in the UI
+
+
+- Toggle buttons on the FAQ
+
+
+- Make the gray boxes in symetry with the darker boxes
+
