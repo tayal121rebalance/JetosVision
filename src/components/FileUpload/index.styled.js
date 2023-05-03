@@ -285,6 +285,12 @@ export const HowItWorks = styled.div`
   flex: none;
   order: 0;
   flex-grow: 0;
+
+  @media(min-width: 1290px) {
+    width: 100%;
+    border:
+    margin: 1rem auto;
+  }
 `;
 
 export const HowItWorksText = styled.div`
@@ -363,6 +369,7 @@ export const WorksContainerText = styled.div`
   order: 0;
   flex-grow: 0;
   z-index: 0;
+  position: relative;
 
   @media(min-width: 620px) {
     font-size: 0.9rem;
