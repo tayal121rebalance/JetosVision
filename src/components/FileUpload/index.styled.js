@@ -371,7 +371,7 @@ export const WorkIcon = styled.div`
   top: 8.33%;
   bottom: 8.33%;
 
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.05) 100%);
+  ${'' /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%); */}
   opacity: 0.5;
 
   position: absolute;
@@ -385,6 +385,12 @@ export const WorkIcon = styled.div`
   right: 45%;
   top: 40%;
   bottom: 8.33%;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
 `;
 
 export const WorkNum = styled.div`
@@ -472,14 +478,19 @@ export const ItemSecion = styled.div`
 `;
 
 export const ItemIcon = styled.div`
-  width: 10rem;
-  height: 10rem;
+  width: 5rem;
+  height: 5rem;
 
-  background: linear-gradient(180deg, rgba(94, 96, 218, 0.5) 0%, rgba(117, 119, 255, 0) 100%);
+  ${'' /* background: linear-gradient(180deg, rgba(94, 96, 218, 0.5) 0%, rgba(117, 119, 255, 0) 100%); */}
 
   flex: none;
   order: 0;
   flex-grow: 0;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
 
 `;
 
