@@ -45,21 +45,20 @@ export const Blackwrapper = styled.div`
   @media(min-width: 680px) {
     margin: 0.5rem auto;
   }
+
+  @media(min-width: 1290px) {
+  width: 80%;
+  margin: 1rem auto;
+}
   
 `;
 export const Whitetext = styled.div`
   
-  width: 651px;
   ${'' /* height: 116px; */}
-  left: 384px;
-  top: 188px;
-  width: 80%;
-
+  
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  ${'' /* font-size: 96px; */}
-  line-height: 116px;
 
   color: rgba(255, 255, 255, 0.95);
   text-align: center;
@@ -69,8 +68,7 @@ export const Whitetext = styled.div`
   width: 90%;
   margin: 0rem auto;
   padding: 0;
-  height: 4rem;
-  line-height: 3.5rem;
+  line-height: 1.7;
   ${'' /* border: 2px solid red; */}
 
   @media(min-width: 680px) {
@@ -81,24 +79,16 @@ export const Whitetext = styled.div`
 `;
 export const Bluetext = styled.div`
  
-  width: 886.63px;
-  height: 74.83px;
-  left: 267.07px;
-  top: 345px;
-
   font-family: "Inter";
   font-style: normal;
   font-weight: 1000;
-  ${'' /* font-size: 96px; */}
-  line-height: 76px;
   text-align: center;
 
   ${'' /* Changed */}
   width: 90%;
   margin: 0rem auto;
-  height: 3rem;
   font-size: 2rem;
-  line-height: 2.5rem;
+  line-height: 1.7;
   ${'' /* border: 2px solid gray; */}
 
 
@@ -313,7 +303,11 @@ export const HowItWorksText = styled.div`
   flex-grow: 0;
   z-index: 0;
 
-  @media(min-width: 780px) {
+  @media(min-width: 620px) {
+    font-size: 2.25rem;
+  }
+  
+  @media(min-width: 1290px) {
     font-size: 3rem;
   }
 `;
@@ -350,7 +344,7 @@ export const WorksContainerItem = styled.div`
   width: 253.75px;
   height: 280px;
 
-  background: linear-gradient(180deg, #121212 0%, rgba(48, 48, 48, 0.5) 100%);
+  background: linear-gradient(180deg, #121212 0%, rgba(48, 48, 48, 0.25) 100%);
   backdrop-filter: blur(250px);
   border-radius: 32px;
 `;
@@ -360,7 +354,7 @@ export const WorksContainerText = styled.div`
   font-family: 'Inter';
   font-style: normal;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.75rem;
   line-height: 2;
   color: #E0E0E0;
   text-align: center;
@@ -369,11 +363,19 @@ export const WorksContainerText = styled.div`
   order: 0;
   flex-grow: 0;
   z-index: 0;
+
+  @media(min-width: 620px) {
+    font-size: 0.9rem;
+  }
+  @media(min-width: 1290px) {
+    font-size: 1rem;
+  }
 `;
 
 export const WorkIcon = styled.div`
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
+  margin: 0.2rem auto;
 
   position: absolute;
   left: 8.33%;
@@ -381,8 +383,8 @@ export const WorkIcon = styled.div`
   top: 8.33%;
   bottom: 8.33%;
 
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.05) 100%);
-  opacity: 0.5;
+  ${'' /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%); */}
+  opacity: 0.75;
 
   position: absolute;
   left: 27.58%;
@@ -395,6 +397,12 @@ export const WorkIcon = styled.div`
   right: 45%;
   top: 40%;
   bottom: 8.33%;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
 `;
 
 export const WorkNum = styled.div`
@@ -436,7 +444,7 @@ z-index: 2;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
-  font-size: 1.7rem;
+  font-size: 1.25rem;
   line-height: 1;
 
   background: linear-gradient(180deg, #7577FF 0%, #4C4DBB 100%);
@@ -461,6 +469,11 @@ export const AboutSection = styled.div`
   width: 90%;
   margin: 2rem auto;
   height: auto;
+
+  @media(min-width: 1290px) {
+  width: 80%;
+  margin: 1rem auto;
+}
 `;
 
 export const ItemSecion = styled.div`
@@ -482,14 +495,24 @@ export const ItemSecion = styled.div`
 `;
 
 export const ItemIcon = styled.div`
-  width: 10rem;
-  height: 10rem;
+  width: 5rem;
+  height: 5rem;
 
-  background: linear-gradient(180deg, rgba(94, 96, 218, 0.5) 0%, rgba(117, 119, 255, 0) 100%);
+  ${'' /* background: linear-gradient(180deg, rgba(94, 96, 218, 0.5) 0%, rgba(117, 119, 255, 0) 100%); */}
 
   flex: none;
   order: 0;
   flex-grow: 0;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
+  @media(min-width: 1290px) {
+    height: 7rem;
+    width: 7rem;
+  }
 
 `;
 
@@ -506,6 +529,10 @@ export const ItemHead = styled.div`
   text-align: justify;
 
   color: rgba(255, 255, 255, 0.95);
+
+  @media(min-width: 1290px) {
+    font-size: 2.5rem;
+  }
 `;
 
 export const ItemPara =styled.div`
@@ -516,18 +543,16 @@ font-weight: 400;
 font-size: 1.4rem;
 line-height: 1.25;
 margin: 1rem 0rem;
-
-/* Grey/ 40 */
-
 color: #BDBDBD;
-
-
-/* Inside auto layout */
 
 flex: none;
 order: 2;
 align-self: stretch;
 flex-grow: 0;
+
+@media(min-width: 1290px) {
+    font-size: 1.75rem;
+  }
 `;
 
 
@@ -542,6 +567,11 @@ export const FaqSection = styled.div`
   margin: 1rem auto;
   height: auto;
 
+@media(min-width: 1290px) {
+  width: 80%;
+  margin: 1rem auto;
+}
+
 `;
 
 export const FaqHead = styled.div`
@@ -554,9 +584,11 @@ font-weight: 400;
 font-size: 1rem;
 line-height: 1;
 text-transform: uppercase;
-
-/* Grey/ 40 */
 color: #BDBDBD;
+
+@media(min-width: 1290px) {
+  font-size: 1.25rem;
+}
 
 `;
 
@@ -574,7 +606,7 @@ width: 100%;
 height: auto;
 overflow-y: scroll;
 
-background: linear-gradient(180deg, rgba(48, 48, 48, 0.15) 0%, rgba(48, 48, 48, 0) 100%);
+background: linear-gradient(180deg, rgba(48, 48, 48, 0.2) 0%, rgba(48, 48, 48, 0.2) 100%);
 backdrop-filter: blur(250px);
 border-radius: 32px;
 
@@ -594,7 +626,7 @@ export const ListItem = styled.div`
   width: 100%;
   height: auto;
 
-  background: linear-gradient(180deg, rgba(48, 48, 48, 0.15) 0%, rgba(48, 48, 48, 0) 100%);
+  background: linear-gradient(180deg, rgba(48, 48, 48, 0.2) 0%, rgba(48, 48, 48, 0.2) 100%);
   backdrop-filter: blur(250px);
 
   border-radius: 24px;
@@ -616,13 +648,14 @@ font-style: normal;
 font-weight: 600;
 font-size: 1.1rem;
 line-height: 2;
-
-/* Grey/ 25 */
-
 color: #E0E0E0;
 
 @media(min-width: 620px) {
   font-size: 1.25rem;
+}
+
+@media(min-width: 1290px) {
+  font-size: 1.5rem;
 }
 
 `;
@@ -637,12 +670,14 @@ font-style: normal;
 font-weight: 400;
 font-size: 1.1rem;
 line-height: 2;
-
-/* Grey/ 40 */
-
 color: #BDBDBD;
+
 @media(min-width: 620px) {
   font-size: 1.25rem;
+}
+
+@media(min-width: 1290px) {
+  font-size: 1.5rem;
 }
 `;
 
