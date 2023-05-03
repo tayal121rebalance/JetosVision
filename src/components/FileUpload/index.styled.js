@@ -45,6 +45,11 @@ export const Blackwrapper = styled.div`
   @media(min-width: 680px) {
     margin: 0.5rem auto;
   }
+
+  @media(min-width: 1290px) {
+  width: 80%;
+  margin: 1rem auto;
+}
   
 `;
 export const Whitetext = styled.div`
@@ -298,7 +303,11 @@ export const HowItWorksText = styled.div`
   flex-grow: 0;
   z-index: 0;
 
-  @media(min-width: 780px) {
+  @media(min-width: 620px) {
+    font-size: 2.25rem;
+  }
+  
+  @media(min-width: 1290px) {
     font-size: 3rem;
   }
 `;
@@ -335,7 +344,7 @@ export const WorksContainerItem = styled.div`
   width: 253.75px;
   height: 280px;
 
-  background: linear-gradient(180deg, #121212 0%, rgba(48, 48, 48, 0.5) 100%);
+  background: linear-gradient(180deg, #121212 0%, rgba(48, 48, 48, 0.25) 100%);
   backdrop-filter: blur(250px);
   border-radius: 32px;
 `;
@@ -358,6 +367,9 @@ export const WorksContainerText = styled.div`
   @media(min-width: 620px) {
     font-size: 0.9rem;
   }
+  @media(min-width: 1290px) {
+    font-size: 1rem;
+  }
 `;
 
 export const WorkIcon = styled.div`
@@ -372,7 +384,7 @@ export const WorkIcon = styled.div`
   bottom: 8.33%;
 
   ${'' /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%); */}
-  opacity: 0.5;
+  opacity: 0.75;
 
   position: absolute;
   left: 27.58%;
@@ -457,6 +469,11 @@ export const AboutSection = styled.div`
   width: 90%;
   margin: 2rem auto;
   height: auto;
+
+  @media(min-width: 1290px) {
+  width: 80%;
+  margin: 1rem auto;
+}
 `;
 
 export const ItemSecion = styled.div`
@@ -492,6 +509,11 @@ export const ItemIcon = styled.div`
     width: 100%;
   }
 
+  @media(min-width: 1290px) {
+    height: 7rem;
+    width: 7rem;
+  }
+
 `;
 
 export const ItemHead = styled.div` 
@@ -507,6 +529,10 @@ export const ItemHead = styled.div`
   text-align: justify;
 
   color: rgba(255, 255, 255, 0.95);
+
+  @media(min-width: 1290px) {
+    font-size: 2.5rem;
+  }
 `;
 
 export const ItemPara =styled.div`
@@ -517,18 +543,16 @@ font-weight: 400;
 font-size: 1.4rem;
 line-height: 1.25;
 margin: 1rem 0rem;
-
-/* Grey/ 40 */
-
 color: #BDBDBD;
-
-
-/* Inside auto layout */
 
 flex: none;
 order: 2;
 align-self: stretch;
 flex-grow: 0;
+
+@media(min-width: 1290px) {
+    font-size: 1.75rem;
+  }
 `;
 
 
@@ -543,6 +567,11 @@ export const FaqSection = styled.div`
   margin: 1rem auto;
   height: auto;
 
+@media(min-width: 1290px) {
+  width: 80%;
+  margin: 1rem auto;
+}
+
 `;
 
 export const FaqHead = styled.div`
@@ -555,9 +584,11 @@ font-weight: 400;
 font-size: 1rem;
 line-height: 1;
 text-transform: uppercase;
-
-/* Grey/ 40 */
 color: #BDBDBD;
+
+@media(min-width: 1290px) {
+  font-size: 1.25rem;
+}
 
 `;
 
@@ -575,7 +606,7 @@ width: 100%;
 height: auto;
 overflow-y: scroll;
 
-background: linear-gradient(180deg, rgba(48, 48, 48, 0.15) 0%, rgba(48, 48, 48, 0) 100%);
+background: linear-gradient(180deg, rgba(48, 48, 48, 0.2) 0%, rgba(48, 48, 48, 0.2) 100%);
 backdrop-filter: blur(250px);
 border-radius: 32px;
 
@@ -595,7 +626,7 @@ export const ListItem = styled.div`
   width: 100%;
   height: auto;
 
-  background: linear-gradient(180deg, rgba(48, 48, 48, 0.15) 0%, rgba(48, 48, 48, 0) 100%);
+  background: linear-gradient(180deg, rgba(48, 48, 48, 0.2) 0%, rgba(48, 48, 48, 0.2) 100%);
   backdrop-filter: blur(250px);
 
   border-radius: 24px;
@@ -617,13 +648,14 @@ font-style: normal;
 font-weight: 600;
 font-size: 1.1rem;
 line-height: 2;
-
-/* Grey/ 25 */
-
 color: #E0E0E0;
 
 @media(min-width: 620px) {
   font-size: 1.25rem;
+}
+
+@media(min-width: 1290px) {
+  font-size: 1.5rem;
 }
 
 `;
@@ -638,12 +670,14 @@ font-style: normal;
 font-weight: 400;
 font-size: 1.1rem;
 line-height: 2;
-
-/* Grey/ 40 */
-
 color: #BDBDBD;
+
 @media(min-width: 620px) {
   font-size: 1.25rem;
+}
+
+@media(min-width: 1290px) {
+  font-size: 1.5rem;
 }
 `;
 
