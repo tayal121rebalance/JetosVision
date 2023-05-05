@@ -14,9 +14,9 @@ export default function Navbar() {
         <ImageContainer>
           <img src={NavbarLogo} alt="navbar_logo" />
         </ImageContainer>
-        <ButtonContainer>
+        {/* <ButtonContainer>
           <Textbox1>Join Beta</Textbox1>
-        </ButtonContainer>
+        </ButtonContainer> */}
       </MainConatiner>
     </>
   );
