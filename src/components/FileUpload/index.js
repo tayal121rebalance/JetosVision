@@ -199,7 +199,7 @@ const FileUpload = () => {
             </WorksContainerItem>
 
             <WorksContainerItem>
-              <WorksContainerText>Vision Processes your documents</WorksContainerText>
+              <WorksContainerText>Pagewhisperer Processes your documents</WorksContainerText>
               <WorkIcon>
                 <img src={process} alt="animg" />
               </WorkIcon>
@@ -225,7 +225,7 @@ const FileUpload = () => {
               <img src={timer} alt="animg"/>
             </ItemIcon>
             <ItemHead>Save hours wasted</ItemHead>
-            <ItemPara>Go through thousands of lines of fine print in a matter of minutes. Once Vision processes your documents, get your questions answered in seconds.</ItemPara>
+            <ItemPara>Go through thousands of lines of fine print in a matter of minutes. Once Pagewhisperer processes your documents, get your questions answered in seconds.</ItemPara>
 
           </ItemSecion>
 
@@ -234,7 +234,7 @@ const FileUpload = () => {
               <img src={data} alt="animg"/>
             </ItemIcon>
             <ItemHead>Control your data</ItemHead>
-            <ItemPara>Vision uses secure data rooms that don’t save your information. View all logs of access and delete them when you’re done</ItemPara>
+            <ItemPara>Pagewhisperer uses secure data rooms that don’t save your information. View all logs of access and delete them when you’re done</ItemPara>
 
           </ItemSecion>
 
@@ -280,7 +280,7 @@ const FileUpload = () => {
             </ListItem>
 
             <ListItem>
-              <Question>Does vision have any limitations on the number of PDF documents that can be uploaded per day?
+              <Question>Does Pagewhisperer have any limitations on the number of PDF documents that can be uploaded per day?
                 <ArrowBox>
                   <Arrow>^</Arrow>
                 </ArrowBox>
@@ -289,7 +289,7 @@ const FileUpload = () => {
             </ListItem>
 
             <ListItem>
-              <Question>Can I upload password-protected PDF documents to Vision?
+              <Question>Can I upload password-protected PDF documents to Pagewhisperer?
                 <ArrowBox>
                   <Arrow>^</Arrow>
                 </ArrowBox>
@@ -298,7 +298,7 @@ const FileUpload = () => {
             </ListItem>
 
             <ListItem>
-              <Question>How long are the chat sessions saved on Vision?         <ArrowBox>
+              <Question>How long are the chat sessions saved on Pagewhisperer?         <ArrowBox>
                 <Arrow>^</Arrow>
               </ArrowBox>
               </Question>
@@ -306,12 +306,12 @@ const FileUpload = () => {
             </ListItem>
 
             <ListItem>
-              <Question>Can I use vision on any device?
+              <Question>Can I use Pagewhisperer on any device?
                 <ArrowBox>
                   <Arrow>^</Arrow>
                 </ArrowBox>
               </Question>
-              <Answer>Yes, Vision is accessible from any device with an internet connection.</Answer>
+              <Answer>Yes, Pagewhisperer is accessible from any device with an internet connection.</Answer>
             </ListItem>
 
           </FaqList>
