@@ -54,8 +54,9 @@ const FileUpload = () => {
   const [files, setFiles] = useState([]);
   const fileInputRef = useRef(null);
   const navigate = useNavigate();
-  const [user, setUser] = useState(null);
+  const [userMessage, setUserMessage] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  
 
   const onFileChange = (e) => {
     const newFiles = Array.from(e.target.files);
@@ -101,36 +102,26 @@ const FileUpload = () => {
     }
   };
 
-  // useEffect(() => {
-  //   console.log(files);
-  // }, [files]);
-
+  //fetch user message
   useEffect(() => {
-    const fetchUser = async () => {
+    const fetchData = async () => {
       const token = localStorage.getItem("token");
-
-      if (!token) {
-        // handle case where user is not authenticated
-        return;
+      if (token) {
+        const response = await fetch("http://0.0.0.0:8083/hello", {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+  
+        if (response.ok) {
+         const  data = await response.json()
+         setUserMessage(data.message)
+        } else {
+          console.log("error");
+        }
       }
-
-      const response = await fetch("", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        setUser(data);
-      } else {
-        console.error("Error retrieving user data");
-      }
-
-      setIsLoading(false);
     };
-
-    fetchUser();
+    fetchData();
   }, []);
 
   const uploadFiles = async (files) => {
@@ -163,6 +154,7 @@ const FileUpload = () => {
     <>
       <Blackwrapper>
         <Whitetext> Pagewhisperer</Whitetext>
+        <Bluetext>User Message: {userMessage}</Bluetext>
         <Bluetext>Your Personal Research assistant</Bluetext>
         <Textbox2>
           Attach all documents you want to source information from

@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import {
   MainConatiner,
   ImageContainer,
@@ -8,15 +9,23 @@ import {
 import NavbarLogo from "../../assests/logo/logo.png";
 
 export default function Navbar() {
+  const  navigate= useNavigate()
+  const isAuth = localStorage.getItem("token");
+  const  handleLogout= ()=>{
+    localStorage.removeItem('token')
+    navigate('/login')
+  }
   return (
     <>
       <MainConatiner>
         <ImageContainer>
           <img src={NavbarLogo} alt="navbar_logo" />
         </ImageContainer>
-        {/* <ButtonContainer>
-          <Textbox1>Join Beta</Textbox1>
-        </ButtonContainer> */}
+        {isAuth ? (
+          <ButtonContainer onClick={handleLogout}>
+            <Textbox1>Logout</Textbox1>
+          </ButtonContainer>
+        ) : null}
       </MainConatiner>
     </>
   );

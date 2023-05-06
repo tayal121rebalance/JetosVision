@@ -21,9 +21,13 @@ function App() {
     <MainContainer>
       <Navbar />
       <Routes>
-        <Route exact path="/" element={<LoginIn />} />
+        <Route exact path="/" element={<ProtectedRoute  />}>
+          <Route exact path="/" element={<FileUpload />} />
+        </Route>
+        <Route exact path="/login" element={<LoginIn />} />
+
         <Route path="/signIn" element={<SignIn />} />
-        {/* <ProtectedRoute exact path="/fileUpload" component={<FileUpload />} /> */}
+
         <Route path="/askme" element={<AskMe />} />
       </Routes>
     </MainContainer>

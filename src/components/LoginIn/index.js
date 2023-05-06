@@ -1,6 +1,8 @@
 import { useState } from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 const LoginIn = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [token, setToken] = useState("");
@@ -8,22 +10,22 @@ const LoginIn = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new URLSearchParams();
-      formData.append('username', email);
-      formData.append('password',  password);
-    const response = await fetch("http://18.224.9.172:8083/token", {
+    formData.append("username", email);
+    formData.append("password", password);
+    const response = await fetch("http://0.0.0.0:8083/token", {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
-      body: formData.toString()
+      body: formData.toString(),
     });
 
     const data = await response.json();
 
     if (response.ok) {
-        console.log("hello")
-      localStorage.setItem(data.token);
-      //setToken(data.token);
+      console.log(data);
+      localStorage.setItem("token", data.access_token);
+      navigate("/");
     } else {
       console.error("Error logging in");
     }

@@ -1,16 +1,9 @@
-import React from "react";
-import { Route, redirect } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 
-const ProtectedRoute = ({ component: Component, ...rest }) => {
-  const isAuthenticated = localStorage.getItem("token");
-  return (
-    <Route
-      {...rest}
-      render={(props) =>
-        isAuthenticated ? <Component {...props} /> : redirect("/signIn")
-      }
-    />
-  );
+const ProtectedRoute = () => {
+  const token = localStorage.getItem("token");
+  const isAuthed = token ? true : false;
+  return <>{isAuthed ? <Outlet /> : <Navigate to="/login" />};</>;
 };
 
 export default ProtectedRoute;

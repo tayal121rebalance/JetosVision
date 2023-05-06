@@ -30,7 +30,7 @@ export const ImageContainer = styled.div`
   }
 `;
 
-export const ButtonContainer = styled.div`
+export const ButtonContainer = styled.button`
   box-sizing: border-box;
   /* Auto layout */
   display: flex;
