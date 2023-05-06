@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import {
   Askbutton,
@@ -14,43 +13,83 @@ import {
 
 import AnswerList from "../AnswerList";
 
+const openAiCompletion = async (messages, onText) => {
+  try {
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer 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`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        messages,
+        model: "gpt-4",
+        max_tokens: 2048,
+        stream: true,
+      }),
+    });
+
+    const decoder = new TextDecoder("utf8");
+    const reader = response.body.getReader();
+
+    let fullText = "";
+    let lastFire = 0;
+
+    async function read() {
+      const { value, done } = await reader.read();
+
+      if (done) return onText(fullText);
+
+      const delta = decoder
+        .decode(value)
+        .match(/"delta":\s*({.*?"content":\s*".*?"})/)?.[1];
+
+      if (delta) {
+        const content = JSON.parse(delta).content;
+
+        fullText += content;
+
+        //Detects punctuation, if yes, fires onText once per .5 sec
+        if (/[\p{P}\p{S}]/u.test(content)) {
+          const now = Date.now();
+
+          if (now - lastFire > 500) {
+            lastFire = now;
+            onText(fullText);
+          }
+        }
+      }
+
+      await read();
+    }
+
+    await read();
+
+    return fullText;
+  } catch (error) {
+    return error;
+  }
+};
+
 export default function AskMe() {
   const [text, setText] = useState("");
+  const [generatedTextt, setGeneratedText] = useState("");
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    console.log("loading state changed to:", loading);
-  }, [loading]);
-  const askRequest = async () => {
-    setLoading(true);
-    try {
-      console.log("making a loading request. Now here's the var")
-      console.log(loading);
-      const response = await fetch("/query", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          query: text,
-        }),
-      });
-     console.log("this is just after loading. and her's the var"); 
-     console.log(loading);
 
-      if (response.ok) {
-        const newData = await response.json();
-        setData([...data, newData]);
-        console.log(data);
-      } else {
-        throw new Error("Error submitting input");
-      }
-      setText("");
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setLoading(false);
-    }
+  const askRequest = async () => {
+    
+    const messages = [
+      { role: "system", content: "You are a helpful assistant." },
+      { role: "user", content: text },
+    ];
+
+    const onText = (newText) => {
+      setGeneratedText(newText);
+      setData([...data, { question: text, answer: newText }]);
+    };
+
+    await openAiCompletion(messages, onText);
+    setText(" ");
   };
 
   return (
@@ -73,9 +112,7 @@ export default function AskMe() {
           </InputContainer>
         </Blackwrapper>
       </div>
-      {loading ? (
-        <LoadingContainer>Process request, please wait for 120 seconds for the server to respond to your request...</LoadingContainer> // You can replace this with a spinner or any other loading indicator
-      ) : data.length !== 0 ? (
+      {data.length !== 0 ? (
         <AnswerContainer>
           <AnswerList data={data} />
         </AnswerContainer>
