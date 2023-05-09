@@ -1,5 +1,5 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import {
   MainConatiner,
   ImageContainer,
@@ -9,12 +9,27 @@ import {
 import NavbarLogo from "../../assests/logo/logo.png";
 
 export default function Navbar() {
-  const  navigate= useNavigate()
+  const navigate = useNavigate();
   const isAuth = localStorage.getItem("token");
-  const  handleLogout= ()=>{
-    localStorage.removeItem('token')
-    navigate('/login')
-  }
+  const [isSignUp, setIsSignUp] = useState();
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/login");
+  };
+
+  const handleLogin = (e) => {
+    navigate("/login");
+  };
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/signIn") {
+      setIsSignUp(true);
+    } else {
+      setIsSignUp(false);
+    }
+  }, [isSignUp]);
+
   return (
     <>
       <MainConatiner>
@@ -24,6 +39,10 @@ export default function Navbar() {
         {isAuth ? (
           <ButtonContainer onClick={handleLogout}>
             <Textbox1>Logout</Textbox1>
+          </ButtonContainer>
+        ) : isSignUp ? (
+          <ButtonContainer onClick={handleLogin}>
+            <Textbox1>Log in</Textbox1>
           </ButtonContainer>
         ) : null}
       </MainConatiner>
