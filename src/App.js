@@ -4,6 +4,9 @@ import Navbar from "./components/Navbar";
 import FileUpload from "./components/FileUpload";
 import { Route, Routes } from "react-router-dom";
 import AskMe from "./components/AskMe";
+import LoginIn from "./components/LoginIn";
+import SignIn from "./components/SignIn";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 const MainContainer = styled.div`
   background: rgba(0, 0, 0, 0.1);
@@ -18,10 +21,14 @@ function App() {
     <MainContainer>
       <Navbar />
       <Routes>
-       
-        <Route exact path="/" element={<FileUpload />} />
-        <Route exact path="/askme" element={<AskMe />} />
-        
+        <Route exact path="/" element={<ProtectedRoute  />}>
+          <Route exact path="/" element={<FileUpload />} />
+        </Route>
+        <Route exact path="/login" element={<LoginIn />} />
+
+        <Route path="/signin" element={<SignIn />} />
+
+        <Route path="/askme" element={<AskMe />} />
       </Routes>
     </MainContainer>
   );
