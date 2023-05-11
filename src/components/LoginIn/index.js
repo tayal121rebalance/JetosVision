@@ -16,7 +16,7 @@ const LoginIn = () => {
     const formData = new URLSearchParams();
     formData.append("username", email);
     formData.append("password", password);
-    const response = await fetch("http://0.0.0.0:8083/token", {
+    const response = await fetch("/token", {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",

@@ -22,6 +22,7 @@ const openAiCompletion = async (userQuery, messages, onText) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem('token')}`,
       },
       body: JSON.stringify({
         query: userQuery, // Use the userQuery parameter instead of the hard-coded value

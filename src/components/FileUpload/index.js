@@ -107,7 +107,7 @@ const FileUpload = () => {
     const fetchData = async () => {
       const token = localStorage.getItem("token");
       if (token) {
-        const response = await fetch("http://0.0.0.0:8083/hello", {
+        const response = await fetch("/hello", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -134,6 +134,9 @@ const FileUpload = () => {
     try {
       const response = await fetch("/upload", {
         method: "POST",
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('token')}`,
+        },
         body: formData,
       });
 
