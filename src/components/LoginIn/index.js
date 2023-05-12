@@ -27,7 +27,7 @@ const LoginIn = () => {
     const data = await response.json();
 
     if (response.ok) {
-      console.log(data);
+      // console.log(data);
       localStorage.setItem("token", data.access_token);
       navigate("/");
     } else {

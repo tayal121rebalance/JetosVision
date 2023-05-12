@@ -15,7 +15,7 @@ import AnswerList from "../AnswerList";
 
 const openAiCompletion = async (userQuery, messages, onText) => {
   try {
-    const apiKey = process.env.REACT_APP_API_KEY;
+    const apiKey = "Bearer " + process.env.REACT_APP_API_KEY;
     let answer = "";
 
     const queery = await fetch("/query", {

@@ -12,26 +12,25 @@ const SignIn = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // const formData = new URLSearchParams();
-    // formData.append("username", email);
-    // formData.append("password", password);
-    // const response = await fetch("http://0.0.0.0:8083/token", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/x-www-form-urlencoded",
-    //   },
-    //   body: formData.toString(),
-    // });
+    const formData = new URLSearchParams();
+    formData.append("username", email);
+    formData.append("password", password);
+    const response = await fetch("/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: formData.toString(),
+    });
 
-    // const data = await response.json();
+    const data = await response.json();
 
-    // if (response.ok) {
-    //   console.log(data);
-    //   localStorage.setItem("token", data.access_token);
-    //   navigate("/");
-    // } else {
-    //   console.error("Error logging in");
-    // }
+    if (response.ok) {
+      console.log(data);
+      navigate("/login");
+    } else {
+      console.error("Error signing up");
+    }
   };
 
   return (
