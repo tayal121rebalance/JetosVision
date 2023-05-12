@@ -22,13 +22,13 @@ function App() {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<ProtectedRoute  />}>
-          <Route exact path="/" element={<FileUpload />} />
+          <Route path="/askme" element={<AskMe />} />
         </Route>
         <Route exact path="/login" element={<LoginIn />} />
-
+        <Route exact path="/mainPage" element={<FileUpload />} />
         <Route path="/signin" element={<SignIn />} />
 
-        <Route path="/askme" element={<AskMe />} />
+       
       </Routes>
     </MainContainer>
   );
